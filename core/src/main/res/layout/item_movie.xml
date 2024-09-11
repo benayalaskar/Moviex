@@ -1,0 +1,110 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Poster Image -->
+        <ImageView
+            android:id="@+id/ivPoster"
+            android:layout_width="101dp"
+            android:layout_height="151dp"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/avatars"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingTop="9dp"
+            app:layout_constraintStart_toEndOf="@id/ivPoster"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="18sp"
+            tools:text="Inside Out 2" />
+
+        <!-- Overview -->
+        <TextView
+            android:id="@+id/tvOverview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:paddingTop="4dp"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
+            app:layout_constraintEnd_toEndOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="14sp"
+            tools:text="Overview" />
+
+        <!-- Release Date Icon -->
+        <ImageView
+            android:id="@+id/ivReleaseDateIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintStart_toStartOf="@id/tvOverview"
+            app:layout_constraintTop_toBottomOf="@id/tvOverview"
+            android:textColor="?attr/colorOnPrimary"
+            android:src="@drawable/baseline_calendar_month_24" />
+
+        <!-- Release Date -->
+        <TextView
+            android:id="@+id/tvReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            app:layout_constraintStart_toEndOf="@id/ivReleaseDateIcon"
+            app:layout_constraintTop_toTopOf="@id/ivReleaseDateIcon"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="14sp"
+            tools:text="Release Date" />
+
+        <!-- Popularity Icon -->
+        <ImageView
+            android:id="@+id/ivPopularityIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintStart_toEndOf="@id/tvReleaseDate"
+            app:layout_constraintTop_toTopOf="@id/tvReleaseDate"
+            android:textColor="?attr/colorOnPrimary"
+            android:src="@drawable/baseline_views_24" />
+
+        <!-- Popularity -->
+        <TextView
+            android:id="@+id/tvPopularity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            app:layout_constraintStart_toEndOf="@id/ivPopularityIcon"
+            app:layout_constraintTop_toTopOf="@id/ivPopularityIcon"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="14sp"
+            tools:text="Popularity" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
