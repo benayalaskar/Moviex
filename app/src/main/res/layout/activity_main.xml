@@ -9,14 +9,14 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_home"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_width="418dp"
+        android:layout_height="57dp"
         android:background="@color/teal_700"
         android:backgroundTint="@color/teal_700"
         android:textColor="@android:color/white"
         app:titleTextColor="@color/purple_200"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteX="-4dp"
         tools:layout_editor_absoluteY="0dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
